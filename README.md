@@ -11,14 +11,14 @@
 
 
 ## 🌐 Rent GPU
-- Visit : [Quick Pod Website](https://console.quickpod.io?affiliate=64e0d2b2-59ee-4989-a05f-f4c3b6dbb2e4)
+- Visit : [Vast.ai Website](https://cloud.vast.ai/?ref_id=226538)
 - Sign Up using email address
-- Go to your email and verify your Quick Pod account
-- Click on `Add` button in the corner to deposit fund
+- Go to your email and verify your Vast.ai account
+- Click on `Add Credit` button in the corner to deposit fund
 - You can deposit using crypto currency (from metamask) or using Credit card
-- Now go to `template` section and then select `Ubuntu 22.04 jammy` in the below
+- Now  select [Ubuntu 22.04 jammy](https://cloud.vast.ai/?ref_id=226538&creator_id=226538&name=Ubuntu%2022.04%20jammy) in the below
 - Now click on `Select GPU` and search `RTX 4090` and choose it
-- Now choose a GPU and click on `Create POD` button
+- Now choose a GPU and click on `RENT` button
 - Your GPU server will be deployed soon
 - Now click on `Connect` option and then choose `Connect to web terminal`
 

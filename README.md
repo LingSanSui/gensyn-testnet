@@ -58,16 +58,20 @@ python3 -m venv .venv && . .venv/bin/activate
 ```
 
 
-**测试全部命令一次性执行**
+**测试全部命令分两次执行**
 ```bash
-apt update && apt install -y sudo && sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && sudo apt update && sudo apt install -y yarn && curl -sSL https://raw.githubusercontent.com/zunxbt/installation/main/node.sh | bash && cd $HOME && [ -d rl-swarm ] && rm -rf rl-swarm; git clone https://github.com/LingSanSui/rl-swarm.git && cd rl-swarm && screen -S gensyn && python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh
+apt update && apt install -y sudo && sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && sudo apt update && sudo apt install -y yarn && curl -sSL https://raw.githubusercontent.com/zunxbt/installation/main/node.sh | bash && cd $HOME && [ -d rl-swarm ] && rm -rf rl-swarm; git clone https://github.com/LingSanSui/rl-swarm.git && cd rl-swarm && screen -S gensyn
 ```
-
-**重启服务器后的一次性执行命令**
 ```bash
-cd rl-swarm && screen -S gensyn && python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh
+python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh
 ```
-
+**重启服务器后的命令分两次执行**
+```bash
+cd rl-swarm && screen -S gensyn
+```
+```bash
+python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh
+```
 **只重启项目的执行命令**
 ```bash
 ./run_rl_swarm.sh

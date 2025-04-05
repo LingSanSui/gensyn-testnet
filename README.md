@@ -56,6 +56,23 @@ python3 -m venv .venv && . .venv/bin/activate
 ```bash
 ./run_rl_swarm.sh
 ```
+
+
+**测试全部命令一次性执行**
+```bash
+apt update && apt install -y sudo && sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && sudo apt update && sudo apt install -y yarn && curl -sSL https://raw.githubusercontent.com/zunxbt/installation/main/node.sh | bash && cd $HOME && [ -d rl-swarm ] && rm -rf rl-swarm; git clone https://github.com/LingSanSui/rl-swarm.git && cd rl-swarm && screen -S gensyn && python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh
+```
+
+**重启服务器后的一次性执行命令**
+```bash
+cd rl-swarm && screen -S gensyn && python3 -m venv .venv && . .venv/bin/activate && ./run_rl_swarm.sh
+```
+
+**只重启项目的执行命令**
+```bash
+./run_rl_swarm.sh
+```
+
 - It will ask some questions, you should send response properly
 - ```Would you like to connect to the Testnet? [Y/n]``` : Write `Y`（默认回车是Y）
 - ```Would you like to push models you train in the RL swarm to the Hugging Face Hub? [y/N]``` : Write `N`（默认回车是N）
